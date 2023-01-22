@@ -1,0 +1,128 @@
+body{
+    background: blueviolet;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/* container using for convert horizantal content to verticle content */
+/* jus_cont : space between using for space of both columns  */
+/* flex wrap are use for wrap all the text at one line */
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* height not give becouse they adjust height according  */
+/* when give margin it's take space , but margin and padding take space becouse this take space coloums will place at different places */
+/* for this different place box ,write box-sizzing this box size take border-box size */
+.container .box {
+    background-color: white;
+    width: 350px;
+    padding: 40px 40px 40px 10px; 
+    margin: 20px;
+    box-shadow: 0px 0px 50px rgba(0,0,0,10);
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.container .box .icon {
+    position: relative;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    background: black;
+    color: white;
+    font-size: 30px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s;
+}
+/* Z-index give privority to show first  */
+.container .box .content{
+    position: relative;
+    z-index: 1;
+}
+
+.container .box .content h3{
+    text-align: center;
+    padding: 10px;
+}
+
+.container .box .content p {
+    padding: 20px;
+}
+
+a{
+    display: inline-block;
+    padding: 20px 10px;
+    margin-left: 35%;
+    text-decoration: none;
+    box-shadow: 0px 0px 10px rgba(0,0,0,10); 
+    background: white;
+    color: black;
+    overflow: hidden;
+}
+
+.container .box:nth-child(1) .icon{
+    background:red;
+    box-shadow: 0px 0px 0px red;
+}
+
+/* for rotating value of icon using transform  */
+.container .box:nth-child(1):hover .icon {
+    box-shadow: 0px 0px 0px 400px red;
+    background: white;
+    color: black;
+    transform: rotateZ(360deg);
+}
+.container .box:nth-child(1):hover .content{
+    color: white;
+}
+
+.container .box:nth-child(2) .icon{
+    background:yellow;
+}
+.container .box:nth-child(2):hover .icon{
+    box-shadow: 0px 0px 0px 400px yellow;
+    background-color: white;
+    color: black;
+    transform: rotateX(360deg);
+}
+
+.container .box:nth-child(3) .icon{
+    background:green;
+}
+.container .box:nth-child(3):hover .icon{
+    box-shadow: 0px 0px 0px 400px green;
+    background-color: white;
+    color: black;
+    transform: rotateY(360deg);
+}
+.container .box:nth-child(3):hover .content{
+    color: white;
+}
+
+.container .box:nth-child(4) .icon{
+    background:blue;
+}
+
+.container .box:nth-child(4):hover .icon{
+    box-shadow: 0px 0px 0px 400px blue;
+    background-color: white;
+    color: black;
+    transform: rotate(360deg);
+}
+.container .box:nth-child(4):hover .content{
+    color: white;
+}
+
